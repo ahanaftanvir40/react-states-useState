@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [count, setCount] = useState(0);
+  let addnum = () => {
+    setCount((count) => count + 1);
+    setCount((count) => count + 1)
+    setCount((count) => count + 1)
+  }
+  let subnum = () => {
+    setCount(count - 1)
+  }
+  let reset = () => {
+    setCount(0)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="box">
+        <p>{count}</p>
+      </div>
+      <button onClick={addnum} className='add' >Add</button>
+      <button onClick={subnum} className='sub'>Sub</button>
+      <button onClick={reset} className='sub'>Reset</button>
     </div>
   );
 }
