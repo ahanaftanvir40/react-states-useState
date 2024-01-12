@@ -30,24 +30,27 @@ function App() {
     setTasks(tasks.filter((task) => taskId !== task.id))
   }
 
+  const [show, setShow] = useState(true)
 
   return (
     <div className="App">
       <div className="box">
         <p>{count}</p>
       </div>
-      <button onClick={addnum} className='add' >Add</button>
+      <button onClick={() => addnum()} className='add' >Add</button>
       <button onClick={subnum} className='sub'>Sub</button>
       <button onClick={reset} className='sub'>Reset</button>
 
       <h1>Task List</h1>
       <ul>
-        {tasks.map((task) => (
-          <li key={task.id}>
+        <button className='trigger' onClick={() => setShow(!show)}>Toggle</button>
+        {show && tasks.map((task) => (
+          <li key={task.id} className={task.completed ? 'completed' : 'incomplete'}>
             <span>{task.id} - {task.name}</span>
             <button onClick={() => taskDel(task.id)} className='delete'>Delete</button>
           </li>
         ))}
+
 
       </ul>
 
