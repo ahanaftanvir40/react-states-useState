@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import './BoxAlert.css'
 
 export const BoxAlert = ({ alert_type, children }) => {
     const [show, setShow] = useState(true)

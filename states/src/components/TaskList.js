@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { TaskCard } from "./TaskCard"
 import { BoxAlert } from "./BoxAlert"
+import './TaskList.css';
 
 export const TaskList = ({ title, info }) => {
 
@@ -21,7 +22,7 @@ export const TaskList = ({ title, info }) => {
 
 
     return (
-        <div>
+        <section className="tasklist">
             <h1>Task List {title}</h1>
             <ul>
                 <button className='trigger' onClick={() => setShow(!show)}>Toggle</button>
@@ -39,6 +40,6 @@ export const TaskList = ({ title, info }) => {
 
 
 
-        </div >
+        </section >
     )
 }

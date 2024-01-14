@@ -3,6 +3,8 @@ import './App.css';
 import { Header } from './components/Header';
 import { Counter } from './components/Counter';
 import { TaskList } from './components/TaskList';
+import { Footer } from './components/Footer'
+
 
 function App() {
 
@@ -17,6 +19,7 @@ function App() {
       <Header />
       <Counter />
       <TaskList title='this is a prop' info={info} />
+      <Footer />
 
 
 
