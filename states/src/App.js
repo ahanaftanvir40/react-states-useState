@@ -6,7 +6,7 @@ import { TaskList } from './components/TaskList';
 
 function App() {
 
-
+  const info = 'props drilling'
 
 
 
@@ -16,7 +16,7 @@ function App() {
 
       <Header />
       <Counter />
-      <TaskList title='this is a prop' />
+      <TaskList title='this is a prop' info={info} />
 
 
 
