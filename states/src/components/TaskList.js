@@ -20,8 +20,9 @@ export const TaskList = ({ title, info }) => {
     const [show, setShow] = useState(true)
 
     const styles = {
-        color: 'cornflowerblue',
-        border: '1px solid black',
+        color: show ? 'cornflowerblue' : 'blue',
+        border: '1px solid',
+        borderColor: show ? 'green' : 'red',
         padding: '20px',
         borderRadius: '10px'
     }
@@ -32,7 +33,7 @@ export const TaskList = ({ title, info }) => {
             <h1 style={{ color: 'red', border: '1px solid black', padding: '20px' }}>Test {title}</h1>
             <h1 style={styles}>TaskDude</h1>
             <ul>
-                <button className='trigger' onClick={() => setShow(!show)}>Toggle</button>
+                <button className='trigger' onClick={() => setShow(!show)}>{show ? 'Hide' : 'Show'}</button>
                 {show && tasks.map((task) => (
                     <TaskCard key={task.id} task={task} taskDel={taskDel} info={info} />
                 ))}
