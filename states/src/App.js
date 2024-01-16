@@ -4,6 +4,7 @@ import { Header } from './components/Header';
 import { Counter } from './components/Counter';
 import { TaskList } from './components/TaskList';
 import { Footer } from './components/Footer'
+import { AddTask } from './components/AddTask'
 
 
 function App() {
@@ -17,8 +18,9 @@ function App() {
     <div className="App">
 
       <Header />
-      <Counter />
-      <TaskList title='this is a prop' info={info} />
+      <Counter title='this is a prop' />
+      <AddTask />
+      <TaskList info={info} />
       <Footer />
 
 

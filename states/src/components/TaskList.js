@@ -4,7 +4,7 @@ import { BoxAlert } from "./BoxAlert"
 import './TaskList.css';
 
 
-export const TaskList = ({ title, info }) => {
+export const TaskList = ({ info }) => {
 
     const [tasks, setTasks] = useState([
         { id: 1, name: 'Do your homework', completed: true },
@@ -31,15 +31,17 @@ export const TaskList = ({ title, info }) => {
 
     return (
         <section className="tasklist">
-            <h1 style={{ color: 'red', border: '1px solid black', padding: '20px' }}>Test {title}</h1>
-            <h1 style={styles}>TaskDude</h1>
+
+
             <ul>
-                <button className='trigger' onClick={() => setShow(!show)}>{show ? 'Hide' : 'Show'}</button>
-                {show && tasks.map((task) => (
-                    <TaskCard key={task.id} task={task} taskDel={taskDel} info={info} />
-                ))}
+                <div className="header">
+                    <h1 style={styles}>TaskDude</h1>
+                    <button className='trigger' onClick={() => setShow(!show)}>{show ? 'Hide' : 'Show'}</button>
+                    {show && tasks.map((task) => (
+                        <TaskCard key={task.id} task={task} taskDel={taskDel} info={info} />
+                    ))}
 
-
+                </div>
             </ul>
             <BoxAlert alert_type='success'>
                 <p className="title">Lorem ipsum dolor sit.</p>
