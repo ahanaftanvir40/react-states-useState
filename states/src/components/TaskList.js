@@ -4,13 +4,8 @@ import { BoxAlert } from "./BoxAlert"
 import './TaskList.css';
 
 
-export const TaskList = ({ info }) => {
+export const TaskList = ({ info, tasks, setTasks }) => {
 
-    const [tasks, setTasks] = useState([
-        { id: 1, name: 'Do your homework', completed: true },
-        { id: 2, name: 'Web dev work', completed: false },
-        { id: 3, name: 'Meeting with faculty', completed: false }
-    ])
 
 
 
