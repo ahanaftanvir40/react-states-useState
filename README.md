@@ -22,10 +22,10 @@ tips : task.map((individual elem here) => {return something})  //we can basicall
 //if we want to access elem from a array suppose
 
 const [tasks, setTasks] = useState([
-    { id: 1, name: 'Do your homework', completed: true },
-    { id: 2, name: 'Web dev work', completed: false },
-    { id: 3, name: 'Meeting with faculty', completed: false }
-  ])
+	{ id: 1, name: 'Do your homework', completed: true },
+	{ id: 2, name: 'Web dev work', completed: false },
+	{ id: 3, name: 'Meeting with faculty', completed: false }
+	])
 
 we use map func. we can do it like this:
 
@@ -240,8 +240,8 @@ const handleSubmit = (e) => {
 
     }
 
-//here we passed setTasks([..tasks , task]) because tasks is an array and inside that there are obj. so we first have to pass an array.
----------------------
+here we passed setTasks([..tasks , task]) because tasks is an array and inside that there are obj. so we first have to pass an array.
+
 //useRef
 
 //it cant render value. but we can use anywhere to use the value.
