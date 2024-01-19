@@ -25,7 +25,7 @@ export const AddTask = ({ tasks, setTasks }) => {
             completed: Boolean(progress)
         }
         console.log(task)
-        setTasks([...tasks, task])
+        setTasks([...tasks, task]) //here it takes all the things from tasks which is in app.js then appends the task on it
         handleReset()
 
     }
