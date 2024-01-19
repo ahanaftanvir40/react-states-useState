@@ -29,7 +29,7 @@ const [tasks, setTasks] = useState([
 
 we use map func. we can do it like this:
 
-#<h1>Task List</h1>
+<tag>Task List</tag>
       #<ul>
         {tasks.map((task) => (
           <li>{task.name}</li>
